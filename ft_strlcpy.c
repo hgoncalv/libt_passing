@@ -6,7 +6,7 @@
 /*   By: hgoncalv <hgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 18:09:35 by hugogonca         #+#    #+#             */
-/*   Updated: 2021/02/19 15:32:45 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2021/03/03 16:07:10 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	if (size < src_len)
+	if (size <= src_len)
 		dst[size - 1] = '\0';
 	else if (size != 0)
 		dst[i] = '\0';
