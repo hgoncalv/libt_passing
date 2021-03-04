@@ -6,13 +6,13 @@
 /*   By: hgoncalv <hgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 15:46:53 by hgoncalv          #+#    #+#             */
-/*   Updated: 2021/03/03 11:31:23 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2021/03/04 11:17:32 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		countdigits(int n)
+static int		countdigits(int n)
 {
 	unsigned int	i;
 	unsigned int	absn;
@@ -29,6 +29,14 @@ int		countdigits(int n)
 	return (i);
 }
 
+static unsigned int	absret(int i)
+{
+	if (i >= 0)
+		return (i);
+	else
+		return (-i);
+}
+
 char	*ft_itoa(int n)
 {
 	int				i;
@@ -42,7 +50,7 @@ char	*ft_itoa(int n)
 	if (!buf)
 		return (NULL);
 	i = 0;
-	absn = abs(n);
+	absn = absret(n);
 	if (n < 0)
 		buf[0] = '-';
 	if (n == 0)
