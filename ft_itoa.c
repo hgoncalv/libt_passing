@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoncalv <hgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/19 15:46:53 by hgoncalv          #+#    #+#             */
-/*   Updated: 2021/03/04 11:17:32 by hgoncalv         ###   ########.fr       */
+/*   Created: 2021/03/04 11:29:10 by hgoncalv          #+#    #+#             */
+/*   Updated: 2021/03/04 11:30:16 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		countdigits(int n)
+static int			countdigits(int n)
 {
 	unsigned int	i;
 	unsigned int	absn;
@@ -37,7 +37,7 @@ static unsigned int	absret(int i)
 		return (-i);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	int				i;
 	unsigned int	absn;
