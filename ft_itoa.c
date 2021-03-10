@@ -6,11 +6,19 @@
 /*   By: hgoncalv <hgoncalv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 11:29:10 by hgoncalv          #+#    #+#             */
-/*   Updated: 2021/03/04 11:30:16 by hgoncalv         ###   ########.fr       */
+/*   Updated: 2021/03/10 11:50:03 by hgoncalv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static unsigned int	absret(int i)
+{
+	if (i >= 0)
+		return (i);
+	else
+		return (-i);
+}
 
 static int			countdigits(int n)
 {
@@ -20,21 +28,13 @@ static int			countdigits(int n)
 	i = 0;
 	if (n <= 0)
 		i++;
-	absn = abs(n);
+	absn = absret(n);
 	while (absn > 0)
 	{
 		i++;
 		absn /= 10;
 	}
 	return (i);
-}
-
-static unsigned int	absret(int i)
-{
-	if (i >= 0)
-		return (i);
-	else
-		return (-i);
 }
 
 char				*ft_itoa(int n)
